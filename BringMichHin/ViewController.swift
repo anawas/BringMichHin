@@ -21,16 +21,18 @@ class ViewController: UIViewController {
         mapView.backgroundColor = .orange
         return mapView
     }()
-    
+
     var bearingView: BearingView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        rootView.addSubview(mapView)
+        //rootView.addSubview(controlView)
         bearingView = BearingView()
         bearingView.mapView = mapView
         bearingView.checkLocationServices()
         mapView.delegate = bearingView
+        rootView.addSubview(mapView)
+
         if let loc = bearingView.readCurrentPosition() {
             currentLocation.text = String(format:"%.5f, %.5f", loc.latitude, loc.longitude)
         } else {
@@ -65,7 +67,7 @@ class ViewController: UIViewController {
         
         constraints.append(mapView.widthAnchor.constraint(equalTo: rootView.widthAnchor))
         constraints.append(mapView.heightAnchor.constraint(equalTo: rootView.heightAnchor, multiplier: 0.55))
-        constraints.append(mapView.bottomAnchor.constraint(equalTo: rootView.safeAreaLayoutGuide.bottomAnchor))
+        constraints.append(mapView.topAnchor.constraint(equalTo: rootView.safeAreaLayoutGuide.topAnchor))
 
         NSLayoutConstraint.activate(constraints)
     }
