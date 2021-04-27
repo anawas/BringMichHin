@@ -10,12 +10,23 @@ import MapKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet var rootView: UIView!
     @IBOutlet weak var currentLocation: UITextField!
+    @IBOutlet weak var bearingField: UITextField!
+    @IBOutlet weak var distanceField: UITextField!
+    
+    private let mapView: MKMapView = {
+        let mapView = MKMapView()
+        mapView.translatesAutoresizingMaskIntoConstraints = false
+        mapView.backgroundColor = .orange
+        return mapView
+    }()
+    
     var bearingView: BearingView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        rootView.addSubview(mapView)
         bearingView = BearingView()
         bearingView.mapView = mapView
         bearingView.checkLocationServices()
@@ -25,11 +36,19 @@ class ViewController: UIViewController {
         } else {
             currentLocation.text = "Kein GPS Signal"
         }
+        addConstraints()
     }
 
     @IBAction func doBearingBtnPressed(_ sender: Any) {
-        let loc = CLLocationCoordinate2D(latitude:47.33156332118081, longitude:8.295973279465715)
-        bearingView.setMarkerOnBearingPoint(location: loc)
+        guard let bearing = Double(bearingField.text!) else { return }
+        guard let distance = Double(distanceField.text!) else { return }
+        
+        if let currLocation = bearingView.readCurrentPosition() {
+            let loc = Bearing.coordinatesFromBearing(location: currLocation, bearing: bearing, distance: distance)
+            bearingView.setMarkerOnBearingPoint(location: loc)
+        }else {
+            return
+        }
     }
 
     @IBAction func updateLocationBtnPressed(_ sender: Any) {
@@ -40,6 +59,17 @@ class ViewController: UIViewController {
             currentLocation.text = "Kein GPS Signal"
         }
     }
+    
+    func addConstraints() {
+        var constraints = [NSLayoutConstraint]()
+        
+        constraints.append(mapView.widthAnchor.constraint(equalTo: rootView.widthAnchor))
+        constraints.append(mapView.heightAnchor.constraint(equalTo: rootView.heightAnchor, multiplier: 0.55))
+        constraints.append(mapView.bottomAnchor.constraint(equalTo: rootView.safeAreaLayoutGuide.bottomAnchor))
+
+        NSLayoutConstraint.activate(constraints)
+    }
+
     
 }
 
