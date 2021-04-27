@@ -123,12 +123,13 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="dCq-O0-KqJ" secondAttribute="trailing" id="4Tt-26-83H"/>
                             <constraint firstItem="ugW-aa-geK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="7Ch-gl-g9A"/>
-                            <constraint firstItem="cAT-ni-F6v" firstAttribute="leading" secondItem="kTi-xU-5he" secondAttribute="trailing" constant="23" id="A8x-28-rsH"/>
+                            <constraint firstItem="cAT-ni-F6v" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kTi-xU-5he" secondAttribute="trailing" symbolic="YES" id="A8x-28-rsH"/>
                             <constraint firstItem="dCq-O0-KqJ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="EWd-rK-VnG"/>
                             <constraint firstItem="dCq-O0-KqJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Jpz-a5-Kdq"/>
                             <constraint firstItem="kTi-xU-5he" firstAttribute="leading" secondItem="ugW-aa-geK" secondAttribute="leading" id="PYI-GP-zBo"/>
                             <constraint firstItem="dCq-O0-KqJ" firstAttribute="top" secondItem="kTi-xU-5he" secondAttribute="bottom" constant="27.5" id="Rko-OY-zXn"/>
                             <constraint firstItem="dCq-O0-KqJ" firstAttribute="top" secondItem="cAT-ni-F6v" secondAttribute="bottom" constant="59" id="SfX-pR-pUf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cAT-ni-F6v" secondAttribute="trailing" constant="16" id="wfK-r9-Wov"/>
                             <constraint firstItem="kTi-xU-5he" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="xpC-57-gM9"/>
                         </constraints>
                     </view>
