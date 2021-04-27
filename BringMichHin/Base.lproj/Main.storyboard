@@ -70,10 +70,18 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PhJ-zZ-kby">
-                                <rect key="frame" x="316" y="120" width="43" height="30"/>
-                                <state key="normal" title="Zeige!"/>
+                                <rect key="frame" x="308" y="120" width="51" height="30"/>
+                                <state key="normal" title="Update"/>
                                 <connections>
                                     <action selector="updateLocationBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XGu-gd-nTB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAT-ni-F6v">
+                                <rect key="frame" x="304" y="223" width="55" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Peilung!"/>
+                                <connections>
+                                    <action selector="doBearingBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2zY-pT-3Nf"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -24,6 +24,8 @@ class BearingView: NSObject, MKMapViewDelegate {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
     
+    //
+    //
     func readCurrentPosition() -> CLLocationCoordinate2D? {
         
         if let location = locationManager.location?.coordinate {
@@ -32,10 +34,20 @@ class BearingView: NSObject, MKMapViewDelegate {
         return nil
     }
     
+    func setMarkerOnBearingPoint(location: CLLocationCoordinate2D) {
+        if let markers = mapView?.annotations {
+            mapView!.removeAnnotations(markers)
+        }
+        
+        let bearingLocation = MKPointAnnotation()
+        bearingLocation.coordinate = location
+        mapView?.addAnnotation(bearingLocation)
+    }
+    
     func centerViewOnUserLocation() {
         if let location = locationManager.location?.coordinate {
             let region = MKCoordinateRegion.init(center: location, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
-            mapView!.setRegion(region, animated: true)
+            mapView!.setRegion(region, animated: false)
         }
     }
     

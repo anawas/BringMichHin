@@ -27,9 +27,15 @@ class ViewController: UIViewController {
         }
     }
 
+    @IBAction func doBearingBtnPressed(_ sender: Any) {
+        let loc = CLLocationCoordinate2D(latitude:47.33156332118081, longitude:8.295973279465715)
+        bearingView.setMarkerOnBearingPoint(location: loc)
+    }
+
     @IBAction func updateLocationBtnPressed(_ sender: Any) {
         if let loc = bearingView.readCurrentPosition() {
             currentLocation.text = String(format:"%.5f, %.5f", loc.latitude, loc.longitude)
+            bearingView.centerViewOnUserLocation()
         } else {
             currentLocation.text = "Kein GPS Signal"
         }

@@ -1,6 +1,6 @@
 //
 //  Bearing.swift
-//  Caluclates the end point for the given bearing 
+//  Calculates the end point for the given bearing 
 //  BringMichHin
 //
 //  Created by Andreas Wassmer on 27.04.21.
