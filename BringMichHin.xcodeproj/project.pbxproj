@@ -16,6 +16,8 @@
 		E185A77E263740220052F25C /* BringMichHinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E185A77D263740220052F25C /* BringMichHinTests.swift */; };
 		E185A789263740220052F25C /* BringMichHinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E185A788263740220052F25C /* BringMichHinUITests.swift */; };
 		E185A7A72637574E0052F25C /* BearingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E185A7A62637574E0052F25C /* BearingView.swift */; };
+		E1A6178C2637FDB40044886D /* Bearing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6178B2637FDB40044886D /* Bearing.swift */; };
+		E1A6178D2637FDB40044886D /* Bearing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6178B2637FDB40044886D /* Bearing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,7 @@
 		E185A788263740220052F25C /* BringMichHinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BringMichHinUITests.swift; sourceTree = "<group>"; };
 		E185A78A263740220052F25C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E185A7A62637574E0052F25C /* BearingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BearingView.swift; sourceTree = "<group>"; };
+		E1A6178B2637FDB40044886D /* Bearing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bearing.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +112,7 @@
 				E185A76F263740220052F25C /* Assets.xcassets */,
 				E185A771263740220052F25C /* LaunchScreen.storyboard */,
 				E185A774263740220052F25C /* Info.plist */,
+				E1A6178B2637FDB40044886D /* Bearing.swift */,
 			);
 			path = BringMichHin;
 			sourceTree = "<group>";
@@ -264,6 +268,7 @@
 				E185A76B263740220052F25C /* ViewController.swift in Sources */,
 				E185A767263740220052F25C /* AppDelegate.swift in Sources */,
 				E185A769263740220052F25C /* SceneDelegate.swift in Sources */,
+				E1A6178C2637FDB40044886D /* Bearing.swift in Sources */,
 				E185A7A72637574E0052F25C /* BearingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1A6178D2637FDB40044886D /* Bearing.swift in Sources */,
 				E185A77E263740220052F25C /* BringMichHinTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

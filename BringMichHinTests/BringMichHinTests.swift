@@ -6,6 +6,9 @@
 //
 
 import XCTest
+import Foundation
+import CoreLocation
+
 @testable import BringMichHin
 
 class BringMichHinTests: XCTestCase {
@@ -19,6 +22,10 @@ class BringMichHinTests: XCTestCase {
     }
 
     func testExample() throws {
+        let start = CLLocationCoordinate2D(latitude: 47.33087361566646, longitude: 9.41103087397927)
+        let coords = Bearing.coordinatesFromBearing(location: start, bearing: 204, distance: 285)
+        
+        NSLog("%.6f, %.6f", coords.latitude, coords.longitude)
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
