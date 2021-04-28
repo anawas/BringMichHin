@@ -22,12 +22,12 @@ class ViewController: UIViewController {
         return mapView
     }()
 
-    var bearingView: BearingView!
+    var bearingView: BearingViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //rootView.addSubview(controlView)
-        bearingView = BearingView()
+        bearingView = BearingViewController()
         bearingView.mapView = mapView
         bearingView.checkLocationServices()
         mapView.delegate = bearingView

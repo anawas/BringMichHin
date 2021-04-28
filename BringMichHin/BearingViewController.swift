@@ -9,7 +9,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class BearingView: NSObject, MKMapViewDelegate {
+class BearingViewController: NSObject, MKMapViewDelegate {
     
     let locationManager = CLLocationManager()
     let regionInMeters: Double = 500
@@ -85,7 +85,7 @@ class BearingView: NSObject, MKMapViewDelegate {
     }
 }
 
-extension BearingView: CLLocationManagerDelegate {
+extension BearingViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else {return}
         let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
