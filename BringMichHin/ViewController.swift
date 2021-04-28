@@ -32,6 +32,9 @@ class ViewController: UIViewController {
         bearingView.checkLocationServices()
         mapView.delegate = bearingView
         rootView.addSubview(mapView)
+        
+        bearingField.delegate = self
+        distanceField.delegate = self
 
         if let loc = bearingView.readCurrentPosition() {
             currentLocation.text = String(format:"%.5f, %.5f", loc.latitude, loc.longitude)
@@ -75,3 +78,9 @@ class ViewController: UIViewController {
     
 }
 
+extension ViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return false
+    }
+}
